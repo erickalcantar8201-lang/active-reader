@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Active Reader</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            gray: {
+              850: '#1f2937',
+              900: '#111827',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body { 
+      background-color: #f9fafb; 
+      color: #111827; 
+      -webkit-tap-highlight-color: transparent;
+    }
+    .dark body { 
+      background-color: #111827; 
+      color: #f3f4f6; 
+    }
+    
+    /* Transitions */
+    .fade-enter-active, .fade-leave-active { transition: opacity 0.2s ease; }
+    .fade-enter-from, .fade-leave-to { opacity: 0; }
+    
+    .slide-enter-active, .slide-leave-active { transition: transform 0.3s ease, opacity 0.3s ease; }
+    .slide-enter-from { transform: translateX(20px); opacity: 0; }
+    .slide-leave-to { transform: translateX(-20px); opacity: 0; }
+    
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .animate-fade-in { animation: fadeIn 0.4s ease forwards; }
+
+    /* Forms */
+    textarea, input {
+      background-color: transparent;
+    }
+    .dark textarea, .dark input {
+      color: #f3f4f6;
+    }
+    .dark textarea:focus, .dark input:focus {
+      outline: none;
+      border-color: #60a5fa;
+    }
+  </style>
+</head>
+<body class="antialiased min-h-screen font-sans selection:bg-blue-200 dark:selection:bg-blue-900 pb-20">
+  <div id="app" class="max-w-md mx-auto min-h-screen relative shadow-sm dark:shadow-none bg-white dark:bg-gray-900 border-x border-gray-200 dark:border-gray-800"></div>
+  
+  <script>
+    window.addEventListener('error', function(e) {
+      console.error("Global crash caught:", e.error);
+      const appDiv = document.getElementById('app');
+      if (appDiv && appDiv.innerHTML === '') {
+         appDiv.innerHTML = '<div style="padding: 20px; text-align: center; font-family: sans-serif; height: 100vh; display: flex; flex-direction: column; justify-content: center;"><h2>Critical Error</h2><p style="color: gray; margin-bottom: 20px;">The application failed to load.</p><button onclick="localStorage.removeItem(&apos;activeReaderData&apos;); window.location.reload();" style="padding: 10px 20px; border-radius: 8px; background: black; color: white; border: none; font-weight: bold; cursor: pointer;">Factory Reset App</button></div>';
+      }
+    });
+  </script>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+      }
+    }
+  </script>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
