@@ -1,0 +1,10 @@
+[
+  {"id": "l1", "texto": "¿Por qué tu refri está caliente por fuera, si por dentro mantiene todo frío?"},
+  {"id": "l2", "texto": "Porque está sacando el calor de tu comida."},
+  {"id": "l3", "texto": "Mira estas tuberías. Por dentro circula un refrigerante que absorbe calor al evaporarse."},
+  {"id": "l4", "texto": "Después, un compresor aprieta ese gas: suben su presión y su temperatura."},
+  {"id": "l5", "texto": "El gas llega a la parte de atrás, libera calor al aire y vuelve a convertirse en líquido."},
+  {"id": "l6", "texto": "Luego pasa por un tubo muy delgado: baja su presión, se enfría y el ciclo comienza otra vez."},
+  {"id": "l7", "texto": "Y aquí está el detalle: afuera termina el calor que sacó de dentro… más la energía que gastó para moverlo."},
+  {"id": "l8", "texto": "Así que, mientras enfría tu comida, tu refri también está calentando la cocina."}
+]

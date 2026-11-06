@@ -1,0 +1,28 @@
+{
+  "name": "video-refri-calor",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Video educativo vertical (Remotion): por qué el refrigerador calienta la cocina",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts RefriCalor out/refri-calor.mp4 --codec=h264 --crf=18 --pixel-format=yuv420p --audio-codec=aac --audio-bitrate=192k",
+    "still": "remotion still src/index.ts RefriCalor"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@fontsource/montserrat": "5.2.6",
+    "@react-three/fiber": "9.3.0",
+    "@remotion/cli": "4.0.541",
+    "@remotion/renderer": "4.0.541",
+    "@remotion/three": "4.0.541",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "remotion": "4.0.541",
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.8",
+    "@types/three": "0.180.0",
+    "typescript": "5.8.3"
+  }
+}
