@@ -1,0 +1,169 @@
+{
+  "fps": 30,
+  "duracion_s": 54.733,
+  "escenas": {
+    "gancho": {
+      "inicio": 0,
+      "fin": 5.773
+    },
+    "absorcion": {
+      "inicio": 5.773,
+      "fin": 15.706
+    },
+    "compresor": {
+      "inicio": 15.706,
+      "fin": 21.661
+    },
+    "condensador": {
+      "inicio": 21.661,
+      "fin": 28.978
+    },
+    "capilar": {
+      "inicio": 28.978,
+      "fin": 36.408
+    },
+    "final": {
+      "inicio": 36.408,
+      "fin": 54.733
+    }
+  },
+  "narracion": [
+    {
+      "id": "l1",
+      "texto": "¿Por qué tu refri está caliente por fuera, si por dentro mantiene todo frío?",
+      "inicio": 0.5,
+      "fin": 5.523,
+      "fotograma_inicio": 15,
+      "fragmentos": [
+        {
+          "texto": "¿Por qué tu refri está caliente por fuera, si por dentro mantiene todo frío?",
+          "inicio": 0.5,
+          "fin": 5.523
+        }
+      ]
+    },
+    {
+      "id": "l2",
+      "texto": "Porque está sacando el calor de tu comida.",
+      "inicio": 6.123,
+      "fin": 8.647,
+      "fotograma_inicio": 184,
+      "fragmentos": [
+        {
+          "texto": "Porque está sacando el calor de tu comida.",
+          "inicio": 6.123,
+          "fin": 8.647
+        }
+      ]
+    },
+    {
+      "id": "l3",
+      "texto": "Mira estas tuberías. Por dentro circula un refrigerante que absorbe calor al evaporarse.",
+      "inicio": 9.147,
+      "fin": 15.406,
+      "fotograma_inicio": 274,
+      "fragmentos": [
+        {
+          "texto": "Mira estas tuberías.",
+          "inicio": 9.147,
+          "fin": 10.65
+        },
+        {
+          "texto": "Por dentro circula un refrigerante que absorbe calor al evaporarse.",
+          "inicio": 10.95,
+          "fin": 15.405
+        }
+      ]
+    },
+    {
+      "id": "l4",
+      "texto": "Después, un compresor aprieta ese gas: suben su presión y su temperatura.",
+      "inicio": 16.106,
+      "fin": 21.311,
+      "fotograma_inicio": 483,
+      "fragmentos": [
+        {
+          "texto": "Después, un compresor aprieta ese gas:",
+          "inicio": 16.106,
+          "fin": 18.974
+        },
+        {
+          "texto": "suben su presión y su temperatura.",
+          "inicio": 19.194,
+          "fin": 21.311
+        }
+      ]
+    },
+    {
+      "id": "l5",
+      "texto": "El gas llega a la parte de atrás, libera calor al aire y vuelve a convertirse en líquido.",
+      "inicio": 22.011,
+      "fin": 28.678,
+      "fotograma_inicio": 660,
+      "fragmentos": [
+        {
+          "texto": "El gas llega a la parte de atrás, libera calor al aire y vuelve a convertirse en líquido.",
+          "inicio": 22.011,
+          "fin": 28.678
+        }
+      ]
+    },
+    {
+      "id": "l6",
+      "texto": "Luego pasa por un tubo muy delgado: baja su presión, se enfría y el ciclo comienza otra vez.",
+      "inicio": 29.328,
+      "fin": 36.058,
+      "fotograma_inicio": 880,
+      "fragmentos": [
+        {
+          "texto": "Luego pasa por un tubo muy delgado:",
+          "inicio": 29.328,
+          "fin": 31.769
+        },
+        {
+          "texto": "baja su presión, se enfría y el ciclo comienza otra vez.",
+          "inicio": 31.989,
+          "fin": 36.058
+        }
+      ]
+    },
+    {
+      "id": "l7",
+      "texto": "Y aquí está el detalle: afuera termina el calor que sacó de dentro… más la energía que gastó para moverlo.",
+      "inicio": 36.858,
+      "fin": 44.888,
+      "fotograma_inicio": 1106,
+      "fragmentos": [
+        {
+          "texto": "Y aquí está el detalle:",
+          "inicio": 36.858,
+          "fin": 38.563
+        },
+        {
+          "texto": "afuera termina el calor que sacó de dentro…",
+          "inicio": 38.783,
+          "fin": 41.457
+        },
+        {
+          "texto": "más la energía que gastó para moverlo.",
+          "inicio": 42.008,
+          "fin": 44.888
+        }
+      ]
+    },
+    {
+      "id": "l8",
+      "texto": "Así que, mientras enfría tu comida, tu refri también está calentando la cocina.",
+      "inicio": 45.738,
+      "fin": 51.404,
+      "fotograma_inicio": 1372,
+      "fragmentos": [
+        {
+          "texto": "Así que, mientras enfría tu comida, tu refri también está calentando la cocina.",
+          "inicio": 45.738,
+          "fin": 51.404
+        }
+      ]
+    }
+  ]
+}
