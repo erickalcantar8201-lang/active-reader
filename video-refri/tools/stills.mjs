@@ -6,7 +6,7 @@ import fs from 'node:fs';
 
 const [outDir, ...times] = process.argv.slice(2);
 fs.mkdirSync(outDir, {recursive: true});
-const browserExecutable = '/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell';
+const browserExecutable = process.env.REMOTION_BROWSER || null;
 const serveUrl = await bundle({entryPoint: path.resolve('src/index.ts')});
 const chromiumOptions = {gl: 'swangle'};
 const composition = await selectComposition({serveUrl, id: 'RefriCalor', browserExecutable, chromiumOptions});

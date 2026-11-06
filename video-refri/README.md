@@ -39,7 +39,7 @@ npm run render          # -> out/refri-calor.mp4
 ./tools/qc.sh out/refri-calor.mp4
 ```
 
-`remotion.config.ts` usa WebGL por software (`swangle`) y el Chromium del contenedor donde se produjo. En otro equipo esa ruta no existe y Remotion descarga su propio navegador. Con GPU puedes cambiar a `Config.setChromiumOpenGlRenderer('angle')` para que el render sea mucho más rápido.
+`remotion.config.ts` usa WebGL por software (`swangle`). Si quieres usar un Chrome headless propio, define la variable `REMOTION_BROWSER` con su ruta; si no, Remotion descarga su propio navegador. Con GPU puedes cambiar a `Config.setChromiumOpenGlRenderer('angle')` para que el render sea mucho más rápido.
 
 ## Voz
 

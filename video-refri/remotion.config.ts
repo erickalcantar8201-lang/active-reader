@@ -1,11 +1,9 @@
 import {Config} from '@remotion/cli/config';
 
-// Chromium headless incluido en el contenedor (cámbialo o elimínalo en tu equipo:
-// Remotion descargará su propio navegador si esta ruta no existe).
-import fs from 'node:fs';
-const local = '/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell';
-if (fs.existsSync(local)) {
-  Config.setBrowserExecutable(local);
+// Navegador opcional: define REMOTION_BROWSER con la ruta a un Chrome headless.
+// Si no se define, Remotion descarga y usa su propio navegador.
+if (process.env.REMOTION_BROWSER) {
+  Config.setBrowserExecutable(process.env.REMOTION_BROWSER);
 }
 // WebGL por software (SwiftShader). Con GPU puedes usar 'angle'.
 Config.setChromiumOpenGlRenderer('swangle');
