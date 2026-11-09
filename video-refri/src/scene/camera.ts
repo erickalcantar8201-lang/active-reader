@@ -99,8 +99,9 @@ export function cameraAt(t: number): CamState {
   while (i < KEYS.length - 1 && KEYS[i + 1].t <= t) i++;
   const a = KEYS[i];
   const b = KEYS[Math.min(i + 1, KEYS.length - 1)];
+  // Antes de la primera clave, o justo en una clave (o después de la última): estado de esa clave.
   if (a === b || t <= a.t) {
-    const k = t <= a.t ? KEYS[0] : a;
+    const k = t < KEYS[0].t ? KEYS[0] : a;
     return {target: new THREE.Vector3(...k.target), yaw: k.yaw, pitch: k.pitch, dist: k.dist, fov: k.fov ?? 34};
   }
   const raw = (t - a.t) / (b.t - a.t);
