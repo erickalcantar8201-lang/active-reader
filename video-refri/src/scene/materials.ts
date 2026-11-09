@@ -28,19 +28,12 @@ export const mat = {
   grille: new THREE.MeshStandardMaterial({color: '#3b4250', roughness: 0.7, metalness: 0.2}),
   backPanel: new THREE.MeshStandardMaterial({color: PALETTE.backPanel, roughness: 0.62, metalness: 0.25}),
   insulation: new THREE.MeshStandardMaterial({color: '#cfd6df', roughness: 0.9}),
-  liner: new THREE.MeshStandardMaterial({
-    color: PALETTE.interior,
-    roughness: 0.55,
-    emissive: new THREE.Color('#bfe3ff'),
-    emissiveIntensity: 0.2,
-  }),
-  linerCover: new THREE.MeshStandardMaterial({
-    color: PALETTE.interior,
-    roughness: 0.55,
-    emissive: new THREE.Color('#bfe3ff'),
-    emissiveIntensity: 0.2,
-    transparent: true,
-  }),
+  // Forro interior autoiluminado (sin sombras ni luces externas): estable y sin parpadeo.
+  liner: new THREE.MeshBasicMaterial({map: linerTexture()}),
+  linerSide: new THREE.MeshBasicMaterial({map: linerTexture(), color: new THREE.Color('#d9e5ef')}),
+  linerTop: new THREE.MeshBasicMaterial({map: linerTexture(), color: new THREE.Color('#cbd9e6')}),
+  linerFloor: new THREE.MeshBasicMaterial({map: linerTexture(), color: new THREE.Color('#e3edf5')}),
+  linerCover: new THREE.MeshBasicMaterial({map: linerTexture(), transparent: true}),
   sideGlass: new THREE.MeshPhysicalMaterial({
     color: PALETTE.fridge,
     roughness: 0.3,
@@ -76,6 +69,27 @@ export const mat = {
   cut: new THREE.MeshStandardMaterial({color: '#f0dfb6', roughness: 0.9}),
   rubber: new THREE.MeshStandardMaterial({color: '#1d2129', roughness: 0.9}),
 };
+
+/** Degradado suave del forro interior: más claro arriba (lámpara), oscurece hacia las esquinas. */
+function linerTexture(): THREE.Texture {
+  const c = document.createElement('canvas');
+  c.width = c.height = 256;
+  const g = c.getContext('2d')!;
+  const v = g.createLinearGradient(0, 0, 0, 256);
+  v.addColorStop(0, '#ffffff');
+  v.addColorStop(0.55, '#eef6fc');
+  v.addColorStop(1, '#d3e2ee');
+  g.fillStyle = v;
+  g.fillRect(0, 0, 256, 256);
+  const r = g.createRadialGradient(128, 110, 40, 128, 128, 190);
+  r.addColorStop(0, 'rgba(255,255,255,0)');
+  r.addColorStop(1, 'rgba(120,150,180,0.22)');
+  g.fillStyle = r;
+  g.fillRect(0, 0, 256, 256);
+  const t = new THREE.CanvasTexture(c);
+  t.colorSpace = THREE.SRGBColorSpace;
+  return t;
+}
 
 /** Textura de sombra de contacto (degradado radial suave). */
 export function contactShadowTexture(): THREE.Texture {

@@ -67,8 +67,8 @@ export const Scene3D: React.FC = () => {
         shadow-camera-bottom={-0.6}
         shadow-camera-near={0.5}
         shadow-camera-far={12}
-        shadow-bias={-0.0004}
-        shadow-normalBias={0.01}
+        shadow-bias={-0.0008}
+        shadow-normalBias={0.025}
         shadow-radius={6}
       />
       <directionalLight position={[3.5, 1.8, 2.5]} intensity={0.75} color="#9cc0ff" />
@@ -77,8 +77,8 @@ export const Scene3D: React.FC = () => {
       <pointLight position={[0, 1.52, 0.12]} intensity={0.9} distance={1.5} decay={1.6} color="#e3f3ff" />
       <pointLight position={[0, 0.7, 0.15]} intensity={0.45} distance={1.0} decay={1.6} color="#e3f3ff" />
       {/* calor del condensador: luz cálida detrás */}
-      <pointLight position={[0, 1.05, -0.52]} intensity={1.4 * heat} distance={2.6} decay={1.4} color="#ff7a4e" />
-      <pointLight position={[0, 1.95, -0.45]} intensity={0.9 * heat} distance={1.8} decay={1.4} color="#ff8a5a" />
+      <pointLight position={[0, 1.05, -0.58]} intensity={1.4 * heat} distance={2.6} decay={1.4} color="#ff7a4e" />
+      <pointLight position={[0, 1.95, -0.55]} intensity={0.9 * heat} distance={1.8} decay={1.4} color="#ff8a5a" />
 
       <Kitchen wallOpacity={kitchenWallOpacity(cam.yaw)} warm={heat} />
       <Fridge sideOpacity={sideWallOpacity(t)} evapCover={evapCover(t)} />

@@ -127,23 +127,23 @@ export const Fridge: React.FC<{sideOpacity: number; evapCover: number}> = ({side
       <Lines points={sideOutline} color="#eef3f8" opacity={0.55 + (1 - sideOpacity) * 0.35} />
 
       {/* --- Forro interior luminoso --- */}
-      <mesh position={[0, (cav.y0 + cav.y1) / 2, cav.zBack + 0.001]} material={mat.liner} receiveShadow>
+      <mesh position={[0, (cav.y0 + cav.y1) / 2, cav.zBack + 0.003]} material={mat.liner}>
         <planeGeometry args={[2 * cav.x, cav.y1 - cav.y0]} />
       </mesh>
-      <mesh position={[-cav.x, (cav.y0 + cav.y1) / 2, (cav.zBack + cav.zFront) / 2]} rotation={[0, Math.PI / 2, 0]} material={mat.liner} receiveShadow>
+      <mesh position={[-cav.x + 0.003, (cav.y0 + cav.y1) / 2, (cav.zBack + cav.zFront) / 2]} rotation={[0, Math.PI / 2, 0]} material={mat.linerSide}>
         <planeGeometry args={[cav.zFront - cav.zBack, cav.y1 - cav.y0]} />
       </mesh>
-      <mesh position={[0, cav.y1 - 0.001, (cav.zBack + cav.zFront) / 2]} rotation={[Math.PI / 2, 0, 0]} material={mat.liner}>
+      <mesh position={[0, cav.y1 - 0.003, (cav.zBack + cav.zFront) / 2]} rotation={[Math.PI / 2, 0, 0]} material={mat.linerTop}>
         <planeGeometry args={[2 * cav.x, cav.zFront - cav.zBack]} />
       </mesh>
-      <mesh position={[0, cav.y0 + 0.001, (cav.zBack + cav.zFront) / 2]} rotation={[-Math.PI / 2, 0, 0]} material={mat.liner} receiveShadow>
+      <mesh position={[0, cav.y0 + 0.003, (cav.zBack + cav.zFront) / 2]} rotation={[-Math.PI / 2, 0, 0]} material={mat.linerFloor}>
         <planeGeometry args={[2 * cav.x, cav.zFront - cav.zBack]} />
       </mesh>
       {/* lámpara */}
       <RBox {...span(-0.09, 0.09, cav.y1 - 0.025, cav.y1, 0.12, 0.2)} r={0.008} material={LAMP} cast={false} />
 
       {/* placa del evaporador (pared fría) */}
-      <RBox {...span(-0.255, 0.255, 1.035, 1.585, cav.zBack - 0.004, cav.zBack + 0.002)} r={0.004} material={mat.evapPlate} cast={false} />
+      <RBox {...span(-0.255, 0.255, 1.035, 1.585, cav.zBack - 0.002, cav.zBack + 0.006)} r={0.003} material={mat.evapPlate} cast={false} receive={false} />
       {/* tapa del forro sobre el evaporador (se desvanece al revelarlo) */}
       <mesh position={[0, 1.31, cav.zBack + 0.026]} material={mat.linerCover} renderOrder={4}>
         <planeGeometry args={[0.56, 0.6]} />
