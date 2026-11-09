@@ -1,6 +1,6 @@
 # ¿Por qué tu refri calienta la cocina? — video educativo vertical (Remotion)
 
-Video vertical de **1080 × 1920, 30 fps, H.264 + AAC, ~55 s** que explica, con un refrigerador 3D original y un circuito de refrigerante animado, por qué un refri enfría por dentro y libera calor por fuera.
+Video vertical de **1080 × 1920, 30 fps, H.264 + AAC, ~51 s** que explica, con un refrigerador 3D original y un circuito de refrigerante animado, por qué un refri enfría por dentro y libera calor por fuera.
 
 - **Video terminado:** [`entrega/refri-calor.mp4`](entrega/refri-calor.mp4)
 - **Tiempos de narración y escenas:** [`entrega/TIEMPOS.md`](entrega/TIEMPOS.md) · [`entrega/tiempos.json`](entrega/tiempos.json)
@@ -22,7 +22,8 @@ Es una sola escena 3D (three.js dentro de Remotion) con **una sola geometría** 
 | `src/scene/reveal.ts` | Cuándo se abren los cortes (pared lateral, forro sobre el evaporador, carcasa del compresor). |
 | `src/overlay/` | Títulos, etiquetas, ondas y flechas de calor, energía eléctrica. Respeta zonas seguras: 160 px arriba, 250 px abajo, 140 px a la derecha. |
 | `src/audio/Soundtrack.tsx` | Mezcla: voz, música con *ducking* y efectos. |
-| `tools/narracion.py` | Síntesis de voz línea por línea (Piper TTS). |
+| `tools/narracion.py` | Síntesis de voz alternativa (Piper TTS). |
+| `tools/voz_externa.py` | Integra una voz externa (ElevenLabs o grabación propia). |
 | `tools/audio.py` | Efectos y música sintetizados desde cero. |
 | `tools/exportar-tiempos.ts` | Exporta `entrega/tiempos.json`, `subtitulos.srt`, `TIEMPOS.md`. |
 | `tools/qc.sh` | Control de calidad del MP4 (resolución, fps, duración, sonoridad, hoja de contactos). |
@@ -43,15 +44,15 @@ npm run render          # -> out/refri-calor.mp4
 
 ## Voz
 
-La narración usa **exactamente** el guion entregado, sintetizada en **español de México** con [Piper TTS](https://github.com/rhasspy/piper) y la voz `es_MX-claude-high` (conjunto de datos con licencia Apache-2.0). La sincronización usa la duración real de cada línea; las pausas breves se colocan entre frases y en «…», sin acelerar la voz.
+La narración usa **exactamente** el guion entregado, generada con **ElevenLabs** (modelo `eleven_v4`, voz «Emiliano – Deep, Clear and Educational», español de México). Solo se añadieron dos indicaciones de tono que no se pronuncian: `[curious]` en la primera frase y `[confident]` en la segunda. La sincronización usa la duración real de cada línea y las pausas internas detectadas en el audio, sin acelerar la voz.
 
-**Limitación:** es una voz sintética de buena calidad, pero no una locución humana. Para cambiarla:
+- Tomas usadas: `voz-elevenlabs/tomas/lN_a.mp3`. Alternativas: `lN_b.mp3`.
+- Para cambiar una toma (o usar otra voz o una grabación propia): copia los 8 audios a una carpeta con los nombres `l1` … `l8` (mp3, wav o m4a) y ejecuta
+  `python tools/voz_externa.py ruta/a/la/carpeta`
+  Esto recorta silencios, iguala el volumen, detecta las pausas y reescribe `public/audio/voz/` y `src/narracion.json`. Después: `npx tsx tools/exportar-tiempos.ts` y `npm run render`.
+- Uso comercial: revisa que tu plan de ElevenLabs lo permita (el plan gratuito no lo incluye).
 
-1. Graba cada línea por separado como `public/audio/voz/l1.wav` … `l8.wav` (los textos están en `tools/guion.json` y en `entrega/TIEMPOS.md`).
-2. Actualiza las duraciones en `src/narracion.json` (campo `duracion` y, si quieres sincronía fina, `fragmentos[].inicio`).
-3. Vuelve a renderizar: escenas, textos y efectos se recolocan solos.
-
-Para regenerar la voz sintética: descarga `es_MX-claude-high.onnx` y su `.onnx.json` (sha256 del modelo `3ef40a71ea63852cd8ab7e6fa7d2ecdcfa67a0b47c9c48e3f10e02ee02083ea0`), instala `pip install piper-tts` y ejecuta `python tools/narracion.py ruta/es_MX-claude-high.onnx`. Piper tiene una pequeña variación aleatoria, así que las duraciones pueden cambiar unas centésimas; el script reescribe `src/narracion.json`.
+La versión anterior con voz sintética abierta (Piper, `tools/narracion.py`) sigue disponible como alternativa sin costo.
 
 ## Música y efectos
 
@@ -68,6 +69,6 @@ Música ambiental y efectos (transiciones, compresor, circulación, siseo del ca
 ## Licencias de recursos
 
 - Tipografía Montserrat: SIL Open Font License (`public/fonts/OFL-Montserrat.txt`).
-- Voz Piper `es_MX-claude-high`: conjunto de datos con licencia Apache-2.0.
+- Voz: generada con ElevenLabs bajo los términos de tu plan.
 - Música y efectos: originales de este proyecto.
 - [Remotion](https://www.remotion.dev/license) es gratuito para personas y empresas de hasta 3 empleados; organizaciones más grandes necesitan licencia de empresa.

@@ -1,30 +1,30 @@
 {
   "fps": 30,
-  "duracion_s": 54.733,
+  "duracion_s": 51.467,
   "escenas": {
     "gancho": {
       "inicio": 0,
-      "fin": 5.773
+      "fin": 5.25
     },
     "absorcion": {
-      "inicio": 5.773,
-      "fin": 15.706
+      "inicio": 5.25,
+      "fin": 14.32
     },
     "compresor": {
-      "inicio": 15.706,
-      "fin": 21.661
+      "inicio": 14.32,
+      "fin": 20.54
     },
     "condensador": {
-      "inicio": 21.661,
-      "fin": 28.978
+      "inicio": 20.54,
+      "fin": 26.82
     },
     "capilar": {
-      "inicio": 28.978,
-      "fin": 36.408
+      "inicio": 26.82,
+      "fin": 34.32
     },
     "final": {
-      "inicio": 36.408,
-      "fin": 54.733
+      "inicio": 34.32,
+      "fin": 51.467
     }
   },
   "narracion": [
@@ -32,136 +32,136 @@
       "id": "l1",
       "texto": "¿Por qué tu refri está caliente por fuera, si por dentro mantiene todo frío?",
       "inicio": 0.5,
-      "fin": 5.523,
+      "fin": 5,
       "fotograma_inicio": 15,
       "fragmentos": [
         {
           "texto": "¿Por qué tu refri está caliente por fuera, si por dentro mantiene todo frío?",
           "inicio": 0.5,
-          "fin": 5.523
+          "fin": 5
         }
       ]
     },
     {
       "id": "l2",
       "texto": "Porque está sacando el calor de tu comida.",
-      "inicio": 6.123,
-      "fin": 8.647,
-      "fotograma_inicio": 184,
+      "inicio": 5.6,
+      "fin": 7.96,
+      "fotograma_inicio": 168,
       "fragmentos": [
         {
           "texto": "Porque está sacando el calor de tu comida.",
-          "inicio": 6.123,
-          "fin": 8.647
+          "inicio": 5.6,
+          "fin": 7.96
         }
       ]
     },
     {
       "id": "l3",
       "texto": "Mira estas tuberías. Por dentro circula un refrigerante que absorbe calor al evaporarse.",
-      "inicio": 9.147,
-      "fin": 15.406,
-      "fotograma_inicio": 274,
+      "inicio": 8.46,
+      "fin": 14.02,
+      "fotograma_inicio": 254,
       "fragmentos": [
         {
           "texto": "Mira estas tuberías.",
-          "inicio": 9.147,
-          "fin": 10.65
+          "inicio": 8.46,
+          "fin": 9.72
         },
         {
           "texto": "Por dentro circula un refrigerante que absorbe calor al evaporarse.",
-          "inicio": 10.95,
-          "fin": 15.405
+          "inicio": 10.08,
+          "fin": 14.02
         }
       ]
     },
     {
       "id": "l4",
       "texto": "Después, un compresor aprieta ese gas: suben su presión y su temperatura.",
-      "inicio": 16.106,
-      "fin": 21.311,
-      "fotograma_inicio": 483,
+      "inicio": 14.72,
+      "fin": 20.19,
+      "fotograma_inicio": 442,
       "fragmentos": [
         {
           "texto": "Después, un compresor aprieta ese gas:",
-          "inicio": 16.106,
-          "fin": 18.974
+          "inicio": 14.72,
+          "fin": 17.59
         },
         {
           "texto": "suben su presión y su temperatura.",
-          "inicio": 19.194,
-          "fin": 21.311
+          "inicio": 17.87,
+          "fin": 20.19
         }
       ]
     },
     {
       "id": "l5",
       "texto": "El gas llega a la parte de atrás, libera calor al aire y vuelve a convertirse en líquido.",
-      "inicio": 22.011,
-      "fin": 28.678,
-      "fotograma_inicio": 660,
+      "inicio": 20.89,
+      "fin": 26.52,
+      "fotograma_inicio": 627,
       "fragmentos": [
         {
           "texto": "El gas llega a la parte de atrás, libera calor al aire y vuelve a convertirse en líquido.",
-          "inicio": 22.011,
-          "fin": 28.678
+          "inicio": 20.89,
+          "fin": 26.52
         }
       ]
     },
     {
       "id": "l6",
       "texto": "Luego pasa por un tubo muy delgado: baja su presión, se enfría y el ciclo comienza otra vez.",
-      "inicio": 29.328,
-      "fin": 36.058,
-      "fotograma_inicio": 880,
+      "inicio": 27.17,
+      "fin": 33.97,
+      "fotograma_inicio": 815,
       "fragmentos": [
         {
           "texto": "Luego pasa por un tubo muy delgado:",
-          "inicio": 29.328,
-          "fin": 31.769
+          "inicio": 27.17,
+          "fin": 29.45
         },
         {
           "texto": "baja su presión, se enfría y el ciclo comienza otra vez.",
-          "inicio": 31.989,
-          "fin": 36.058
+          "inicio": 29.84,
+          "fin": 33.97
         }
       ]
     },
     {
       "id": "l7",
       "texto": "Y aquí está el detalle: afuera termina el calor que sacó de dentro… más la energía que gastó para moverlo.",
-      "inicio": 36.858,
-      "fin": 44.888,
-      "fotograma_inicio": 1106,
+      "inicio": 34.77,
+      "fin": 42.18,
+      "fotograma_inicio": 1043,
       "fragmentos": [
         {
           "texto": "Y aquí está el detalle:",
-          "inicio": 36.858,
-          "fin": 38.563
+          "inicio": 34.77,
+          "fin": 36.05
         },
         {
           "texto": "afuera termina el calor que sacó de dentro…",
-          "inicio": 38.783,
-          "fin": 41.457
+          "inicio": 36.54,
+          "fin": 39.17
         },
         {
           "texto": "más la energía que gastó para moverlo.",
-          "inicio": 42.008,
-          "fin": 44.888
+          "inicio": 39.6,
+          "fin": 42.18
         }
       ]
     },
     {
       "id": "l8",
       "texto": "Así que, mientras enfría tu comida, tu refri también está calentando la cocina.",
-      "inicio": 45.738,
-      "fin": 51.404,
-      "fotograma_inicio": 1372,
+      "inicio": 43.03,
+      "fin": 48.15,
+      "fotograma_inicio": 1291,
       "fragmentos": [
         {
           "texto": "Así que, mientras enfría tu comida, tu refri también está calentando la cocina.",
-          "inicio": 45.738,
-          "fin": 51.404
+          "inicio": 43.03,
+          "fin": 48.15
         }
       ]
     }
