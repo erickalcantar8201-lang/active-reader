@@ -1,0 +1,123 @@
+[
+  {
+    "id": "l1",
+    "texto": "¿Por qué tu refri está caliente por fuera, si por dentro mantiene todo frío?",
+    "duracion": 4.5,
+    "fragmentos": [
+      {
+        "texto": "¿Por qué tu refri está caliente por fuera, si por dentro mantiene todo frío?",
+        "inicio": 0.0,
+        "duracion": 4.5
+      }
+    ]
+  },
+  {
+    "id": "l2",
+    "texto": "Porque está sacando el calor de tu comida.",
+    "duracion": 2.36,
+    "fragmentos": [
+      {
+        "texto": "Porque está sacando el calor de tu comida.",
+        "inicio": 0.0,
+        "duracion": 2.36
+      }
+    ]
+  },
+  {
+    "id": "l3",
+    "texto": "Mira estas tuberías. Por dentro circula un refrigerante que absorbe calor al evaporarse.",
+    "duracion": 5.56,
+    "fragmentos": [
+      {
+        "texto": "Mira estas tuberías.",
+        "inicio": 0.0,
+        "duracion": 1.26
+      },
+      {
+        "texto": "Por dentro circula un refrigerante que absorbe calor al evaporarse.",
+        "inicio": 1.62,
+        "duracion": 3.94
+      }
+    ]
+  },
+  {
+    "id": "l4",
+    "texto": "Después, un compresor aprieta ese gas: suben su presión y su temperatura.",
+    "duracion": 5.47,
+    "fragmentos": [
+      {
+        "texto": "Después, un compresor aprieta ese gas:",
+        "inicio": 0.0,
+        "duracion": 2.87
+      },
+      {
+        "texto": "suben su presión y su temperatura.",
+        "inicio": 3.15,
+        "duracion": 2.32
+      }
+    ]
+  },
+  {
+    "id": "l5",
+    "texto": "El gas llega a la parte de atrás, libera calor al aire y vuelve a convertirse en líquido.",
+    "duracion": 5.63,
+    "fragmentos": [
+      {
+        "texto": "El gas llega a la parte de atrás, libera calor al aire y vuelve a convertirse en líquido.",
+        "inicio": 0.0,
+        "duracion": 5.63
+      }
+    ]
+  },
+  {
+    "id": "l6",
+    "texto": "Luego pasa por un tubo muy delgado: baja su presión, se enfría y el ciclo comienza otra vez.",
+    "duracion": 6.8,
+    "fragmentos": [
+      {
+        "texto": "Luego pasa por un tubo muy delgado:",
+        "inicio": 0.0,
+        "duracion": 2.28
+      },
+      {
+        "texto": "baja su presión, se enfría y el ciclo comienza otra vez.",
+        "inicio": 2.67,
+        "duracion": 4.13
+      }
+    ]
+  },
+  {
+    "id": "l7",
+    "texto": "Y aquí está el detalle: afuera termina el calor que sacó de dentro… más la energía que gastó para moverlo.",
+    "duracion": 7.41,
+    "fragmentos": [
+      {
+        "texto": "Y aquí está el detalle:",
+        "inicio": 0.0,
+        "duracion": 1.28
+      },
+      {
+        "texto": "afuera termina el calor que sacó de dentro…",
+        "inicio": 1.77,
+        "duracion": 2.63
+      },
+      {
+        "texto": "más la energía que gastó para moverlo.",
+        "inicio": 4.83,
+        "duracion": 2.58
+      }
+    ]
+  },
+  {
+    "id": "l8",
+    "texto": "Así que, mientras enfría tu comida, tu refri también está calentando la cocina.",
+    "duracion": 5.12,
+    "fragmentos": [
+      {
+        "texto": "Así que, mientras enfría tu comida, tu refri también está calentando la cocina.",
+        "inicio": 0.0,
+        "duracion": 5.12
+      }
+    ]
+  }
+]

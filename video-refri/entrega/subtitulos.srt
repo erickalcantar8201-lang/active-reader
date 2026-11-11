@@ -1,0 +1,52 @@
+1
+00:00:00,500 --> 00:00:05,000
+¿Por qué tu refri está caliente por fuera, si por dentro mantiene todo frío?
+
+2
+00:00:05,600 --> 00:00:07,960
+Porque está sacando el calor de tu comida.
+
+3
+00:00:08,460 --> 00:00:09,720
+Mira estas tuberías.
+
+4
+00:00:10,080 --> 00:00:14,020
+Por dentro circula un refrigerante que absorbe calor al evaporarse.
+
+5
+00:00:14,720 --> 00:00:17,590
+Después, un compresor aprieta ese gas:
+
+6
+00:00:17,870 --> 00:00:20,190
+suben su presión y su temperatura.
+
+7
+00:00:20,890 --> 00:00:26,520
+El gas llega a la parte de atrás, libera calor al aire y vuelve a convertirse en líquido.
+
+8
+00:00:27,170 --> 00:00:29,450
+Luego pasa por un tubo muy delgado:
+
+9
+00:00:29,840 --> 00:00:33,970
+baja su presión, se enfría y el ciclo comienza otra vez.
+
+10
+00:00:34,770 --> 00:00:36,050
+Y aquí está el detalle:
+
+11
+00:00:36,540 --> 00:00:39,170
+afuera termina el calor que sacó de dentro…
+
+12
+00:00:39,600 --> 00:00:42,180
+más la energía que gastó para moverlo.
+
+13
+00:00:43,030 --> 00:00:48,150
+Así que, mientras enfría tu comida, tu refri también está calentando la cocina.
+
